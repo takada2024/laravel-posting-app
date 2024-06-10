@@ -2,10 +2,9 @@
 
 namespace Database\Seeders;
 
-use App\Models\Post;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\Models\User;
+use App\Models\Post;
 
 class PostSeeder extends Seeder
 {
@@ -14,6 +13,7 @@ class PostSeeder extends Seeder
      */
     public function run(): void
     {
+        // PostFactoryクラスで定義した内容にもとづいてダミーデータを5つ生成し、postsテーブルに追加する
         POST::factory()->count(5)->create();
     }
 }

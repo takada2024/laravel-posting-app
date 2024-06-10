@@ -18,9 +18,9 @@ class PostFactory extends Factory
     public function definition(): array
     {
         return [
-            'user_id' => 2,
-            'title' => fake()->realText(30),
-            'content' => fake()->realText(100)
+            'user_id' => 2, // usersテーブルにidカラムの値が2のユーザーが存在することが前提
+            'title' => fake()->realText(20, 5),
+            'content' => fake()->realText(200, 5)
         ];
     }
 }
